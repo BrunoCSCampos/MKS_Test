@@ -58,6 +58,8 @@ public class Game_Manager : MonoBehaviour
         playerScore = 0;
         hasStarted = false;
         Instantiate(playerPrefab, playerPrefab.transform.position, Quaternion.identity);
+        ChangeTimer();
+        hasTimedOut = false;
         ChangeSpawner();
     }
     public void UpdateScore()

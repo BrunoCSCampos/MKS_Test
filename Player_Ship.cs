@@ -210,10 +210,14 @@ public class Player_Ship : MonoBehaviour
     public void DestroyShip()
     {
         GameObject flames = GameObject.FindGameObjectWithTag("Effect");
-        Destroy(flames.gameObject);
+        if (flames != null)
+        {
+            Destroy(flames.gameObject);
+        }
         Destroy(this.gameObject);
         
     }
-    
+
+      
 
 }
